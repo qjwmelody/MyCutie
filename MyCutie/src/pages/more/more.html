@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>详情</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card text-center>
+    <ion-card-content class="question">
+
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>评论：</ion-label>
+          <ion-textarea type="text" rows="3" style="height:100%;" [(ngModel)]="content"></ion-textarea>
+        </ion-item>
+      </ion-list>
+      <br>
+
+      <button ion-button outline color="danger" class="like" (click)="saveFavourite()">
+        {{isFavourite ? '取消喜欢' : '喜欢'}}&nbsp;&nbsp;：{{likeCount}}</button>
+      <button ion-button outline color="danger" (click)="submit()">
+        <span ion-text color="danger" showWhen="ios">发布</span>
+        <ion-icon name="md-add-circle" showWhen="android"></ion-icon>
+      </button>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="reply" *ngFor="let reply of repliesArray">
+    <ion-item>
+      <p>{{reply['ownerName']}}</p>
+    </ion-item>
+    <ion-card-content>
+      <p>{{reply['Content']}}</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<!-- 
+<ion-header>
+  <ion-navbar>
+    <ion-title>详情</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content class="question">
+
+      <button ion-button block outline color="danger" class="like" (click)="saveFavourite()">
+        &nbsp;{{isFavourite ? '取消喜欢' : '喜欢'}}&nbsp;&nbsp;LikeCount：{{likeCount}}</button><br>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>Input your comment:</ion-label>
+          <ion-textarea type="text" rows="3" style="height:100%;" [(ngModel)]="content"></ion-textarea>
+        </ion-item>
+      </ion-list>
+      <br>
+      <ion-buttons end>
+        <button ion-button block outline color="danger" (click)="submit()">
+          <span ion-text color="danger" showWhen="ios">发布</span>
+          <ion-icon name="md-add-circle" showWhen="android"></ion-icon>
+        </button>
+      </ion-buttons>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="reply" *ngFor="let reply of repliesArray">
+    <ion-item>
+      <p>{{reply['ownerName']}}</p>
+    </ion-item>
+    <ion-card-content>
+      <p>{{reply['Content']}}</p>
+      <p class="answer_date">{{reply['createdAt']}}</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content> -->

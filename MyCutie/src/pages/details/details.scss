@@ -1,0 +1,23 @@
+page-details {
+    .question{
+        border-top: 2px solid rgb(149, 175, 248);
+        border-left: 2px solid rgb(149, 175, 248);
+        border-right: 2px solid rgb(149, 175, 248);
+        border-bottom: 2px solid rgb(149, 175, 248);
+        background-color: rgb(149, 175, 248);
+        .ans{
+            background-color: #98a4c5;
+        }
+        .like{
+            background-color: #e7cc9a;
+        }
+    }
+
+    .answer{
+        border-top: 1px solid rgb(149, 175, 248);
+        border-left: 1px solid rgb(149, 175, 248);
+        border-right: 1px solid rgb(149, 175, 248);
+        border-bottom: 1px solid rgb(149, 175, 248);
+    }
+
+}

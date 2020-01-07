@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar style="opacity: 0.6" no-border-bottom color="danger">
+      <ion-title text-center>动态</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content text-center>
+    <div>
+      <br><br>
+      <img src="https://s2.ax1x.com/2019/11/07/Mk00IJ.jpg" alt="Mk00IJ.jpg" height="50%" width="70%"/>
+    </div>
+    <div class="buttons">
+      <div padding>
+        <button ion-button color="danger" round (click)="gotoMomentsPage()">广场
+        </button>
+        <button ion-button color="danger" outline round (click)="gotoRecordsPage()">我的
+        </button>
+      </div>
+    </div>
+    <ion-fab right bottom >
+      <button class="post" ion-fab (click)="gotoPostPage()">
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    </ion-fab>
+  </ion-content>

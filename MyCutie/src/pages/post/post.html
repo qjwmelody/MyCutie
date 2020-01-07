@@ -1,0 +1,36 @@
+<!--
+  Generated template for the PostPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>记录我的沙雕生活</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <!-- 两个按钮，第一个是选择拍照还是从文件，第二个是上传 -->
+  <ion-buttons>
+    <button ion-button color="danger" icon-left (click)="presentActionSheet()">
+      <ion-icon name="images"></ion-icon>选择
+    </button>
+    <button ion-button icon-left color="danger" (click)="uploadImage()" [disabled]="lastPic === null">
+      <ion-icon name="cloud"></ion-icon>上传
+    </button>
+  </ion-buttons>
+  <br>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>记录下心情吧~</ion-label>
+      <ion-textarea type="text" rows="3" style="height:100%;" [(ngModel)]="content"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <!-- 显示照片 -->
+  <img [src]="path" style="width:60%;height:60%;" [hidden]="lastPic === null">
+  <h3 [hidden]="lastPic !== null">你可以从手机相册选择照片或现拍</h3>
+
+</ion-content>

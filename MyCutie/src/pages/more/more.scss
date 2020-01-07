@@ -1,0 +1,23 @@
+page-more {
+    .question{
+        border-top: 2px solid #6e95c8;
+        border-left: 2px solid #6e95c8;
+        border-right: 2px solid #6e95c8;
+        border-bottom: 2px solid #6e95c8;
+        background-color: #ffffff;
+        .ans{
+            background-color: #98a4c5;
+        }
+        .like{
+            background-color: #ffffff;
+        }
+    }
+
+    .answer{
+        border-top: 1px solid #6e95c8;
+        border-left: 1px solid #6e95c8;
+        border-right: 1px solid #6e95c8;
+        border-bottom: 1px solid #6e95c8;
+    }
+
+}

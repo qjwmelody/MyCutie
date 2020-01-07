@@ -1,0 +1,35 @@
+<!--
+  Generated template for the RecordsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header text-center>
+  <ion-navbar>
+    <ion-title>Mine</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="danger" showWhen="ios">??</span>
+        <ion-icon name="md-close" showWhen="android"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-slides pager="true">
+
+    <div *ngFor="let f of feeds">
+      <ion-slide>
+        <ion-card (click)="gotoMorePage(f)">
+          <ion-card-content>
+            {{f['content']}}
+          </ion-card-content>
+          <div class="">
+            <img src="{{picture[f['index']]}}">
+          </div>
+        </ion-card>
+      </ion-slide>
+    </div>
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Moments</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="danger" showWhen="ios">??</span>
+        <ion-icon name="md-close" showWhen="android"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-slides pager="true">
+
+    <div *ngFor="let f of feeds">
+      <ion-slide>
+        <ion-card (click)="gotoMorePage(f)">
+          <img class="picture" src="https://s2.ax1x.com/2019/11/08/ME1uEq.jpg">
+          <ion-card-content>
+            {{f['content']}}
+          </ion-card-content>
+          <div class="">
+            <img src="https://s2.ax1x.com/2019/11/08/MElHN6.jpg">
+          </div>
+        </ion-card>
+      </ion-slide>
+
+    </div>
+  </ion-slides>
+
+</ion-content>
+
+<!-- <div *ngFor="let f of feeds">
+      <ion-slide>
+        <ion-card (click)="gotoMorePage(f)">
+          <img class="picture" src="{{photo[f['index']]}}">
+          <ion-card-content text-left>
+            {{f['content']}}
+          </ion-card-content>
+          <div class="">
+            <img src="https://s2.ax1x.com/2019/11/07/Mk68G4.jpg" alt="Mk68G4.jpg" height="50%" width="70%" />
+          </div>
+        </ion-card>
+      </ion-slide>
+    </div>
+
+    <div *ngFor="let f of feeds">
+      <ion-slide>
+        <ion-card (click)="gotoMorePage(f)">
+          <img class="picture" src="{{photo[f['index']]}}">
+          <ion-card-content text-left>
+            {{f['content']}}
+          </ion-card-content>
+          <div class="">
+            <img src="https://s2.ax1x.com/2019/11/07/MEk3mF.md.jpg" alt="Mk68G4.jpg" height="50%" width="70%" />
+          </div>
+        </ion-card>
+      </ion-slide>
+    </div> -->

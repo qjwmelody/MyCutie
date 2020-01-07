@@ -1,0 +1,103 @@
+page-showus {
+  .question {
+    background-color: #5882FA !important;
+  }
+
+  .note-container {
+    padding: 10px;
+    column-count: 1;
+    column-gap: 0;
+
+    .note {
+      break-inside: avoid;
+      box-sizing: border-box;
+      padding: 5px;
+
+      overflow: hidden;
+      .picture{
+        width: 40px;
+        height: 40px;
+      }
+
+      .note-avatar {
+        //border-radius: 5px 5px 0 0;
+        background: #faf8f8;
+        padding: 5px 5px;
+        font-size: 12px;
+        text-align: left;
+        color: rgb(0, 0, 0);
+        border-width: 2px;
+        border-top: 1px solid rgb(149, 175, 248);
+        border-left: 1px solid rgb(149, 175, 248);
+        border-right: 1px solid rgb(149, 175, 248);
+        line-height: 20px;
+      }
+
+      .note-title {
+        //border-radius: 5px 5px 0 0;
+        border-top: 1px dashed rgb(149, 175, 248);
+        border-left: 1px solid rgb(149, 175, 248);
+        border-right: 1px solid rgb(149, 175, 248);
+        background: #faf8f8;
+        height: 50px;
+        padding: 8px 10px;
+        font-size: 17px;
+        text-align: left;
+        color: rgb(0, 0, 0);
+
+        
+
+        .titletext{
+          width:200px; 
+          white-space:nowrap;
+          overflow:hidden;
+          text-overflow:ellipsis; 
+          border-top: 0px;
+          border-left: 0px;
+          border-right: 0px;
+        }
+      }
+
+      .note-content {
+        background: rgb(149, 175, 248);
+        color: #f7f0f0;
+        padding: 15px;
+        font-size: 14px;
+        line-height: 20px;
+        // max-height: 220px;
+        overflow: hidden;
+
+        .text {
+          max-height: 100px;
+          overflow: hidden;
+        }
+
+        .time {
+          margin-top: 10px;
+        }
+
+        ol {
+          margin: 0;
+          padding-left: 15px;
+        }
+      }
+
+      .note-address {
+        border-top: 1px solid #f3e3ee;
+        background: #8d7a8a;
+        color: #dbdbdb;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        font-size: 12px;
+
+        .icon {
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+
+
+}
